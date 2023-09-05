@@ -12,11 +12,9 @@ const Navbar = ({
   appointment: { loading: apploading, appointments },
   message: { loading: messageloading, newMessages },
   getBookedAppointments,
-  loadNewMessages,
 }) => {
   useEffect(() => {
     getBookedAppointments();
-    loadNewMessages(!loading && user && user._id);
   }, [getBookedAppointments, loadNewMessages, loading]);
 
   const authLinks = () => (
@@ -123,7 +121,6 @@ Navbar.propTypes = {
   appointment: PropTypes.object.isRequired,
   message: PropTypes.object.isRequired,
   getBookedAppointments: PropTypes.func.isRequired,
-  loadNewMessages: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
