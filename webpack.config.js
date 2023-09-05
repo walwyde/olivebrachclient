@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
-    publicPath: "./public",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -24,7 +24,7 @@ module.exports = {
       },
       {
         test: /\.(png|j?g|svg|gif)?$/,
-        use: "file-loader?name=./public/images/[name].[ext]",
+        use: "file-loader?name=/images/[name].[ext]",
       },
     ],
   },
