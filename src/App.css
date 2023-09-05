@@ -1,0 +1,11 @@
+.custom-icons {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  padding: 0.2rem;
+}
+
+img #logo {
+  width: 5px;
+  height: 5px;
+}
