@@ -70,7 +70,7 @@ background-color: #518819;
 /* Remove default margins */
 
 .banner_section {
-background-image: url("/img/depression.jpg");
+background-image: url("img/depression.jpg");
 background-size: cover;
 background-position: right;
 height: 75vh;
