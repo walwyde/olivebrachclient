@@ -68,7 +68,7 @@ class Login extends Form {
       e.preventDefault();
       console.log(this.state.resetData);
       const res = await axios.post(
-        "http://localhost:3001/api/auth/forgot",
+        `${process.env.BACKEND_URL}/api/auth/forgot`,
         this.state.resetData
       );
       console.log(res)

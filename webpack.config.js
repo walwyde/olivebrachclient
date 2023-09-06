@@ -27,5 +27,10 @@ module.exports = {
         use: "file-loader?name=/images/[name].[ext]",
       },
     ],
+    plugins: [
+      new webpack.DefinePlugin({
+        "process.env.BACKEND_URL": JSON.stringify("https://olivebranchserver.onrender.com"),
+      }),
+    ],
   },
-}
+};

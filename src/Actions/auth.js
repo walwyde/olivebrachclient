@@ -18,7 +18,7 @@ export const loadUser = () => async (dispatch) => {
   if (token) setHeader(token);
 
   try {
-    const res = await axios.get("/api/auth");
+    const res = await axios.get(`${process.env.BACKEND_URL}/api/auth`);
     if (!res.data || res.data === undefined) {
       dispatch({
         type: load_error,
@@ -43,7 +43,7 @@ export const loadUser = () => async (dispatch) => {
 
 export const login = (formData, history) => async (dispatch) => {
   try {
-    const res = await axios.post("/api/auth", formData);
+    const res = await axios.post(`${process.env.BACKEND_URL}/api/auth`, formData);
 
     if (res) history.replace("/dashboard");
 
@@ -66,7 +66,7 @@ export const login = (formData, history) => async (dispatch) => {
 };
 export const register = (formData, history) => async (dispatch) => {
   try {
-    const res = await axios.post("http://localhost:3001/api/users", formData);
+    const res = await axios.post(`${process.env.BACKEND_URL}http://localhost:3001/api/users`, formData);
 
     console.log(res);
 
