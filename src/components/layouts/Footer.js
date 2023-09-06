@@ -47,10 +47,10 @@ const Footer = () => {
       </div>
 
       <div className="column2">
-        <div className="info">
+        {/* <div className="info">
           <h3>Information</h3>
           <p>
-            <a href="#About Us">About Us</a>
+            <a href="https://gitHub.com/walwyde">About Us</a>
           </p>
           <p>
             <a href="#Contact Us">Contact Us</a>
@@ -59,35 +59,47 @@ const Footer = () => {
             {" "}
             <a href="Support Us"> Support Us</a>
           </p>
-        </div>
+        </div> */}
 
         <div className="contacts">
           <h3>Contact Us</h3>
-          <p>+02234567778</p>
           <p>
-            <a href="jwnjoroge4@gmail.com">jwnjoroge4@gmail.com</a>
+          <i className="prefix material-icons">message</i>
+            +2347067858251</p>
+          <p>
+          <i className="prefix material-icons">mail</i>
+
+            <a href="walwyde@gmail.com">walwyde@gmail.com</a>
           </p>
         </div>
 
         <div className="socials">
+          <div className="row">
+            <div className="col s12">
           <a href="twitter.com">
             <img
               src="https://cliply.co/wp-content/uploads/2021/09/CLIPLY_372109260_TWITTER_LOGO_400.gif"
               alt=" twitter logo"
             />
           </a>
-          <a href="whatsapp.com">
+          <a href="https://twitter.com/walwyde">Yobe Auwal On Twitter</a>
+          </div>
+          <div className="col s12">
+          <a href="whatsapp.com ">
             <img
               src="https://cliply.co/wp-content/uploads/2021/08/372108180_WHATSAPP_ICON_400.gif"
               alt="whatsapp logo"
             />
           </a>
+          +234 706 785 8251
+          </div>
+</div>
         </div>
       </div>
 
-      <div className="copyrights">
+      <div className="center">
         <p>
-          Copyright &copy 2021 | All rights reserved |{" "}
+          Copyright &copy 2023 | All rights reserved |{" "}
           <a href="https://en.wikipedia.org/wiki/Online_counseling">
             License
           </a>{" "}

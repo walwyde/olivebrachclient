@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import Form from "../common/Form";
-import { Loading } from "../layouts/Loading";
+import Loading from "../layouts/Loading";
 import { getProfileById, editProfile } from "../../Actions/profile";
 import { loadUser } from "../../Actions/auth";
 
