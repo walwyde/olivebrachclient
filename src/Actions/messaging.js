@@ -24,7 +24,7 @@ export const saveMessage = (data, id) => async (dispatch) => {
       },
     };
 
-    const res = await axios.post(`${process.env.BACKEND_URL}/api/conversations/${id}/messages`, data);
+    const res = await axios.post(`https://olivebranchserver.onrender.com/api/conversations/${id}/messages`, data);
 
     if (res) {
       dispatch({
@@ -45,7 +45,7 @@ export const saveMessage = (data, id) => async (dispatch) => {
 export const deleteMessage =
   (conversationId, messageId) => async (dispatch) => {
     try {
-      const res = await axios.post(`${process.env.BACKEND_URL}/api/conversations/delete-message`, {
+      const res = await axios.post(`https://olivebranchserver.onrender.com/api/conversations/delete-message`, {
         conversationId,
         messageId,
       });
@@ -69,7 +69,7 @@ export const initConversation = (id) => async (dispatch) => {
     dispatch({
       type: clear_messages,
     });
-    const res = await axios.post(`${process.env.BACKEND_URL}/api/conversations/${id}`, { _id: id });
+    const res = await axios.post(`https://olivebranchserver.onrender.com/api/conversations/${id}`, { _id: id });
     if (res.data) {
       dispatch({
         type: init_convo,
@@ -94,7 +94,7 @@ export const getConvoMessages = (id) => async (dispatch) => {
       type: clear_messages,
     });
 
-    const res = await axios.get(`${process.env.BACKEND_URL}/api/conversations/${id}/messages`);
+    const res = await axios.get(`https://olivebranchserver.onrender.com/api/conversations/${id}/messages`);
     console.log(res); // Handle the response from the backend
     dispatch({
       type: get_messages,
@@ -114,7 +114,7 @@ export const getConvoMessages = (id) => async (dispatch) => {
 
 export const deleteConvo = (convoId) => async (dispatch) => {
   try {
-    const res = await axios.post(`${process.env.BACKEND_URL}/api/conversations/delete-conversation`, {
+    const res = await axios.post(`https://olivebranchserver.onrender.com/api/conversations/delete-conversation`, {
       convoId,
     });
 
@@ -132,7 +132,7 @@ export const deleteConvo = (convoId) => async (dispatch) => {
 
 export const getConversations = () => async (dispatch) => {
   try {
-    const res = await axios.get(`${process.env.BACKEND_URL}/api/conversations`);
+    const res = await axios.get(`https://olivebranchserver.onrender.com/api/conversations`);
     console.log(res); // Handle the response from the backend
     if (res.data) {
       dispatch({
@@ -154,7 +154,7 @@ export const getConversations = () => async (dispatch) => {
 
 export const loadNewMessages = (userId) => async (dispatch) => {
   try {
-    const res = await axios.get(`${process.env.BACKEND_URL}/api/conversations/new-messages`);
+    const res = await axios.get(`https://olivebranchserver.onrender.com/api/conversations/new-messages`);
 
     if (res.data && res.data.length > 0) {
       const payload = { messages: res.data, userId };

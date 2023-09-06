@@ -46,7 +46,7 @@ const UpdatePassword = ({ match: { params }, history }) => {
     e.preventDefault();
     delete data.errors;
     try {
-      const res = await axios.post("/api/auth/reset-password", data);
+      const res = await axios.post("https://olivebranchserver.onrender.com/api/auth/reset-password", data);
       console.log(res);
       const errors = res.data.errors;
       const success = res.data.success;

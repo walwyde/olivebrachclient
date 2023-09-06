@@ -18,7 +18,7 @@ export const loadCurrentProfile = () => async (dispatch) => {
     dispatch({
       type: clear_profile,
     });
-    const res = await axios.get(`${process.env.BACKEND_URL}/api/profile/me`);
+    const res = await axios.get(`https://olivebranchserver.onrender.com/api/profile/me`);
     if (res)
       dispatch({
         type: load_profile,
@@ -35,7 +35,7 @@ export const loadCurrentProfile = () => async (dispatch) => {
 export const createProfile = (formData, history) => async (dispatch) => {
   try {
     console.log(formData);
-    const res = await axios.post(`${process.env.BACKEND_URL}/api/profile/me`, formData);
+    const res = await axios.post(`https://olivebranchserver.onrender.com/api/profile/me`, formData);
     console.log(res);
     if (res.errors)
       return res.errors.forEach((error) =>
@@ -77,7 +77,7 @@ export const editProfile = (formData, profileId, history) => async (dispatch) =>
       payload: formData,
     });
 
-    const res = await axios.post(`${process.env.BACKEND_URL}/api/profile/${profileId}`, formData);
+    const res = await axios.post(`https://olivebranchserver.onrender.com/api/profile/${profileId}`, formData);
     console.log(res);
 
     if(res && res.status >= 200 && res.status < 300) history.push("/dashboard");
@@ -99,7 +99,7 @@ export const getProfileById = (profileId) => async (dispatch) => {
       type: clear_profile,
     });
 
-    const response = await axios.get(`${process.env.BACKEND_URL}/api/profile/${profileId}`);
+    const response = await axios.get(`https://olivebranchserver.onrender.com/api/profile/${profileId}`);
 
     console.log(response.data);
 
@@ -124,7 +124,7 @@ export const getProfileById = (profileId) => async (dispatch) => {
 export const deleteAccount = () => async (dispatch) => {
   if (window.confirm("Are you sure? This cannot be undone!")) {
     try {
-      await axios.delete(`${process.env.BACKEND_URL}/api/profile/me`);
+      await axios.delete(`https://olivebranchserver.onrender.com/api/profile/me`);
 
       dispatch({
         type: delete_account,
@@ -148,7 +148,7 @@ export const addAvailability = (formData) => async (dispatch) => {
   };
   try {
     const res = await axios.post(
-      `${process.env.BACKEND_URL}/api/profile/me/availability`
+      `https://olivebranchserver.onrender.com/api/profile/me/availability`
     );
 
     if (res.errors) return dispatch(setAlert(res.error.msg, "danger"));
@@ -169,7 +169,7 @@ export const addAvailability = (formData) => async (dispatch) => {
 export const updateProfileImage = (formData) => async (dispatch) => {
   try {
     const res = await axios.post(
-      `${process.env.BACKEND_URL}/api/profile/avatar`,
+      `https://olivebranchserver.onrender.com/api/profile/avatar`,
 
       formData,
       {

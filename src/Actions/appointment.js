@@ -28,7 +28,7 @@ export const addAvailability = (availability) => async (dispatch) => {
     },
   };
   try {
-    const res = await axios.post(`${process.env.BACKEND_URL}/api/appointment/me/availability`, {
+    const res = await axios.post(`https://olivebranchserver.onrender.com/api/appointment/me/availability`, {
       availability,
     });
 
@@ -51,7 +51,7 @@ export const addAvailability = (availability) => async (dispatch) => {
 };
 export const clearAvailability = () => async (dispatch) => {
   try {
-    const res = await axios.delete(`${process.env.BACKEND_URL}/api/appointment/me/availability`);
+    const res = await axios.delete(`https://olivebranchserver.onrender.com/api/appointment/me/availability`);
 
     dispatch({
       type: load_availability,
@@ -65,7 +65,7 @@ export const clearAvailability = () => async (dispatch) => {
 };
 export const getDoctors = () => async (dispatch) => {
   try {
-    const res = await axios.get(`${process.env.BACKEND_URL}/api/appointment/doctors`);
+    const res = await axios.get(`https://olivebranchserver.onrender.com/api/appointment/doctors`);
     console.log(res);
 
     if (res.status === 404) {
@@ -96,7 +96,7 @@ export const getDoctors = () => async (dispatch) => {
 
 export const getAppointment = (id) => async (dispatch) => {
   try {
-    const res = await axios.get(`${process.env.BACKEND_URL}/api/appointment/${id}`);
+    const res = await axios.get(`https://olivebranchserver.onrender.com/api/appointment/${id}`);
 
     console.log(res);
     dispatch({
@@ -118,7 +118,7 @@ export const newAppointment = (doctor, time, date) => async (dispatch) => {
     date,
   };
   try {
-    const res = await axios.post(`${process.env.BACKEND_URL}/api/appointment`, formData);
+    const res = await axios.post(`https://olivebranchserver.onrender.com/api/appointment`, formData);
 
     if (res) {
       dispatch({
@@ -141,7 +141,7 @@ export const newAppointment = (doctor, time, date) => async (dispatch) => {
 
 export const deleteAppointment = (id) => async (dispatch) => {
   try {
-    const res = await axios.delete(`${process.env.BACKEND_URL}/api/appointment/${id}`);
+    const res = await axios.delete(`https://olivebranchserver.onrender.com/api/appointment/${id}`);
 
     if (res) {
       dispatch({
@@ -163,7 +163,7 @@ export const deleteAppointment = (id) => async (dispatch) => {
 
 export const updateAppointment = (id, formData) => async (dispatch) => {
   try {
-    const res = await axios.put(`${process.env.BACKEND_URL}/api/appointment/${id}`, formData);
+    const res = await axios.put(`https://olivebranchserver.onrender.com/api/appointment/${id}`, formData);
     dispatch({
       type: update_appointment,
       payload: { id, appointment: res.data },
@@ -179,7 +179,7 @@ export const updateAppointment = (id, formData) => async (dispatch) => {
 
 export const getBookedAppointments = () => async (dispatch) => {
   try {
-    const res = await axios.get(`${process.env.BACKEND_URL}/api/appointment`);
+    const res = await axios.get(`https://olivebranchserver.onrender.com/api/appointment`);
 
     dispatch({
       type: get_appointments,
@@ -195,7 +195,7 @@ export const getBookedAppointments = () => async (dispatch) => {
 
 export const approveAppointment = (id) => async (dispatch) => {
   try {
-    const res = await axios.put(`${process.env.BACKEND_URL}/api/appointment/${id}`, {
+    const res = await axios.put(`https://olivebranchserver.onrender.com/api/appointment/${id}`, {
       _id: id,
     });
 
