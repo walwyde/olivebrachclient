@@ -1,4 +1,3 @@
-/* Styling the about page begins here */
 .about_us{
   margin-right:50px;
   margin-left: 50px;
@@ -33,7 +32,6 @@ width: 200px;
   flex-direction: column-reverse;
 
 }
-/* Styling about section */
 .about {
   width: 600px;
   padding-left: 10px;

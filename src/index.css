@@ -1,6 +1,5 @@
 
 
-/* Stories,features and video*/
 .educational_videos_section{
     
   background-color: #f7f7f7;
@@ -16,10 +15,8 @@ body {
 
 
 
-/* This file contains css rules for the website */
 
 
-/* Css rules for the footer begin here */
 
 .column, .column2{
 display: flex;
@@ -64,10 +61,7 @@ footer {
 background-color: #518819;
 }
 
-/* Css rules for footer end here */
 
-/* css rules for the banner section */
-/* Remove default margins */
 
 .banner_section {
 background-image: url("img/depression.jpg");
@@ -76,17 +70,13 @@ background-position: right;
 height: 75vh;
 width: 100%;
 }
-/* css rules for the navigation bar */
 
 nav ul li a:hover{
  
 
 color:#F29A13;
 
-} */
-
-/* Add css rule for sticky header */
-
+} *
 .sticky {
 position: fixed;
 top: 0px;
@@ -124,7 +114,6 @@ height: 60%;
 }
 
 @media only screen and (max-width: 400px) {
-/* Adjust the position of the banner image for mobile view. */
 .banner_section {
   background-position: bottom;
   height: 300px;
@@ -135,7 +124,6 @@ nav ul li a:hover{
   color:#518819;
   
   }
-/* Display hamburger menu icon on mobile view. */
 #menu_icon {
   display: block;
   width: 48px;
@@ -145,10 +133,7 @@ nav ul li a:hover{
   top: 50%;
   transform: translate(0, -50%);
 }
-/* Adjust the site title font for mobile view. */
-/* nav #title {
-  font-size: 24px;
-} */
+
 .introduction{
 
   width:fit-content;
@@ -178,9 +163,7 @@ nav ul li a:hover{
 }
 }
 
-/* css rules for the banner section */
 
-/* START OF CSS FOR NEW FEATURES SECTION  */
 .booking {
 background-color: #F7F7F7;
 
@@ -236,6 +219,4 @@ input:-internal-autofill-selected {
   background-color: -internal-light-dark(rgb(254, 254, 232), rgba(70, 90, 126, 0.4)) !important;
   color: fieldtext !important;
 }
-/* END OF NEW CSS FOR NEW FEATURES SECTION  */
-/* css for video section title */
 
