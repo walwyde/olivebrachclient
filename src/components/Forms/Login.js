@@ -92,7 +92,7 @@ class Login extends Form {
     const { data, errors, resetData } = this.state;
     return (
       <div>
-        <h3 className="center yellow-text">Login</h3>
+        <h3 className="center green-text">Login</h3>
         <form onSubmit={(e) => this.handleSubmit(e)}>
           {this.renderInput("email", "Email", "email")}
           {this.renderInput(
@@ -102,14 +102,14 @@ class Login extends Form {
           )}
           <div className="input-field">
             <p>
-              <label className="yellow-text">
+              <label className="green-text">
                 <input
                   checked={this.state.showPass}
                   type="checkbox"
                   id="showPass"
                   onChange={() => this.handleCheckChange()}
                 />
-                <span>
+                <span className="helper-text red-text darken-1">
                   {" "}
                   {this.state.showPass ? "Hide Password " : "Show Password "}
                 </span>
@@ -117,16 +117,16 @@ class Login extends Form {
             </p>
           </div>
 
-          {this.renderButton("Login", "btn")}
+          {this.renderButton("Login", "btn ")}
         </form>
         <div className=" center-align mt-2 text-white">
           Don't have an account?{" "}
-          <Link className="yellow-text" to="/register">
+          <Link className="red-text darken-1" to="/register">
             Register{" "}
           </Link>
         </div>
         {this.state.loginAttempts > 3 && (
-          <a href="#password-reset" className="yellow-text modal-trigger">
+          <a href="#password-reset" className="red-text darken-1 modal-trigger">
             Forgot Password?
           </a>
         )}

@@ -1,4 +1,4 @@
-.about_us{
+/* .about_us{
   margin-right:50px;
   margin-left: 50px;
 }
@@ -13,9 +13,9 @@
 .about_us {
   background-color: #F7F7F7;
   text-align: center;
-}
+} */
 /* Style Founders section */
-.Founders img{
+/* .Founders img{
 height: 200px;
 width: 200px;
 
@@ -59,9 +59,9 @@ width: 650px;
 }
 .about h2, h3 {
   color: #F29A13 ;
-}
+} */
 /* Styling the contact section */
-.contact {
+/* .contact {
   width: 650px;
   float: right;
   margin-right: 40px;
@@ -84,10 +84,10 @@ color: #518819;
 }
 .contact_img img{
   height: 400px;
-width: 300px;
+width: 300px; */
  /* Adding styles to different sections */
-}
-hr {
+/* } */
+/* hr {
   width: 100px;
   height: 4px;
   background-color: #F29A13;
@@ -106,4 +106,4 @@ span{
   font-weight: bolder;
   margin-top: 10px;
   color: #F29A13;
-}
+} */

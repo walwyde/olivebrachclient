@@ -36,7 +36,7 @@ class Register extends Form {
   render() {
     return (
       <div>
-        <h3 className="center yellow-text">Registration Form</h3>
+        <h3 className="center green-text">Registration Form</h3>
         <form onSubmit={this.handleSubmit} className="white-text">
           {this.renderInput("fullname", "fullname", "text")}
           {this.renderInput("email", "email", "email")}
@@ -45,10 +45,10 @@ class Register extends Form {
           {this.renderInput("addiction", "addiction", "text")}
           {this.renderInput("password", "password", "password")}
           {this.renderInput("password2", "password2", "password")}
-          {this.renderButton("submit")}
+          {this.renderButton("submit", "btn")}
         </form>
-        <div className=" center-align mt-2 white-text">
-        if you have an account <Link className="yellow-text" to='/login'>Login </Link> 
+        <div className=" center-align mt-2">
+        if you have an account <Link className="green-text" to='/login'>Login </Link> 
         </div>
       </div>
     );
