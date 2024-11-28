@@ -8,7 +8,7 @@ const Landing = () => {
         <div class="green p-2" style={{ opacity: "0.8" }}></div>
       </section>
 
-      <div className="black accent-4 center white-text ">
+      <div className="blue darken-2 center white-text ">
         <p className="flow-text">
           Social, mental and psychological health is critical to our personal
           growth. We provide resources that may help you move towards wellness.

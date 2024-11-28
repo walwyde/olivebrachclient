@@ -20,13 +20,13 @@ const Navbar = ({
   const authLinks = () => (
     <div>
       <li>
-        <Link to="/dashboard">
+        <Link className="blue-text darken-2" to="/dashboard">
           DASHBOARD
           <i className="material-icons left ">dashboard</i>
         </Link>
       </li>
       <li>
-        <Link to="/messages">
+        <Link className="blue-text darken-2" to="/messages">
           MESSAGES
           {}
           {newMessages.length > 0 ? (
@@ -44,12 +44,12 @@ const Navbar = ({
             {appointments.length}
           </span>
         )}
-        <Link to="/appointments">
+        <Link className="blue-text darken-2" to="/appointments">
           {user && user.isStaff ? "APPOINTMENTS" : "TALK TO US"}
         </Link>
       </li>
       <li>
-        <Link onClick={() => logout()} to="#">
+        <Link className="blue-text darken-2" onClick={() => logout()} to="#">
           LOGOUT{" "}
         </Link>
       </li>
@@ -58,22 +58,22 @@ const Navbar = ({
   const guestLinks = () => (
     <div>
       <li>
-        <Link to="/content"> TOPICS</Link>
+        <Link className="blue-text darken-2" to="/content"> TOPICS</Link>
       </li>
       <li>
-        <Link to="/resources"> RESOURCES</Link>
+        <Link className="blue-text darken-2" to="/resources"> RESOURCES</Link>
       </li>
 
       <li>
         {" "}
-        <Link to="/about"> ABOUT</Link>
+        <Link className="blue-text darken-2" to="/about"> ABOUT</Link>
       </li>
       <li>
-        <Link to="/login"> LOGIN </Link>
+        <Link className="blue-text darken-2" to="/login"> LOGIN </Link>
       </li>
       <li>
         {" "}
-        <Link to="/register"> REGISTER </Link>
+        <Link className="blue-text darken-2" to="/register"> REGISTER </Link>
       </li>
     </div>
   );
@@ -91,7 +91,9 @@ const Navbar = ({
               src="OliveBranch.png"
               alt=""
               style={{
-                width: "5rem",
+                width: "4.5rem",
+                justifyContent: "center",
+                alignItems: "center"
               }}
             />
           </Link>
@@ -100,7 +102,7 @@ const Navbar = ({
             className="sidenav-trigger hide-on-med-and-up right"
             data-target="mobile-icons"
           >
-            <i className="material-icons">menu</i>
+            <i className="material-icons blue-text darken-2">menu</i>
           </Link>
           <ul className="right hide-on-small-only">
             {!loading && isAuthenticated ? authLinks() : guestLinks()}
@@ -108,7 +110,7 @@ const Navbar = ({
         </div>
       </nav>
 
-      <ul className="sidenav" id="mobile-icons">
+      <ul className="sidenav" id="mobile-icons blue-text darken-2">
         {!loading && isAuthenticated ? authLinks() : guestLinks()}
       </ul>
     </Fragment>
